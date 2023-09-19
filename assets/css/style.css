@@ -1,0 +1,32 @@
+* {
+    font-family: roboto, sans-serif;
+}
+
+.exemplo {
+    background-color: rgb(34, 148, 215);
+    width: 200px;
+    height: 200px;
+    border: 30px solid;
+    margin: 50px auto;
+}
+
+#exemplo-1 {
+    border-image-source: url('../img/Untitledfigma.png');
+    border-image-repeat: repeat; /*stretch -> estica a imagem para caber na borda
+    round -> vai dimencionar a imagem para caber na borda sem corta-la*/
+    border-image-slice: 169; /*fill*/
+    /*border-image-width: 10px 20px 30px 40px; /*espessura da borda*/
+    border-image-outset: 30px; /*vai se afastar 30px pra fora*/
+}
+
+#exemplo-2 {
+    background-color: black;
+    border-image-source: linear-gradient(red, blue);
+    border-image-slice: 10; /*gradient nao usa repeat*/
+}
+
+#exemplo-resumido {
+                                                /*slice / largura-imagem     / BI outset(1) Border-image-repeat(round) */
+    border-image: url('../img/Untitledfigma.png') 169 / 10px 20px 30px 40px / 1 round;
+
+}
